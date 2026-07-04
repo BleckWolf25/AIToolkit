@@ -233,7 +233,7 @@ def main():
 
     selected_prompt = None
     if args.prompt:
-        matching = [p for p in prompts if p.stem == args.prompt or p.name == args.prompt]
+        matching = [p for p in prompts if args.prompt in (p.stem, p.name)]
         if not matching:
             print(f"[ERROR] Prompt '{args.prompt}' not found.")
             sys.exit(1)
