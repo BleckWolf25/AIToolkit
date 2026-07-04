@@ -1,0 +1,31 @@
+prompt_config: prompts/find-security-bugs-json.config.yaml
+
+cases:
+  - name: flask-injection-json
+    variables:
+      CONTEXT: Simple Flask web application route processing user query parameters
+      LANGUAGE: Python
+      RAW_CODE: |
+        from flask import request
+        import sqlite3
+
+        @app.route("/search")
+        def search():
+            query = request.args.get("q")
+            conn = sqlite3.connect("data.db")
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM entries WHERE value = '" + query + "'")
+            return str(cursor.fetchall())
+    assertions:
+      - "matches_schema: schemas/security-report.schema.json"
+
+  - name: js-eval-json
+    variables:
+      CONTEXT: Frontend utility module for parsing math expressions in a sandbox
+      LANGUAGE: JavaScript
+      RAW_CODE: |
+        function evaluateFormula(inputStr) {
+            return eval(inputStr); 
+        }
+    assertions:
+      - "matches_schema: schemas/security-report.schema.json"

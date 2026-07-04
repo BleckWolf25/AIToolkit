@@ -1,0 +1,5 @@
+Title: Use PostgreSQL for main database
+Status: Accepted
+Context: We need a relational database to store relational transactions and user profiles with strong ACID guarantees.
+Decision: We will use PostgreSQL (v16) hosted on Amazon RDS.
+Consequences: Gives us robust relational database support, standard SQL queries, but requires schema migrations and scaling RDS clusters.

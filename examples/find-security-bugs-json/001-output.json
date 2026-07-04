@@ -1,0 +1,11 @@
+{
+  "findings": [
+    {
+      "id": "SEC-01",
+      "severity": "HIGH",
+      "vulnerability_type": "SQL Injection",
+      "description": "Direct string formatting in cursor.execute() permits arbitrary SQL payload execution.",
+      "remediation_code": "def get_user_data(username):\n    conn = sqlite3.connect(\"users.db\")\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT * FROM users WHERE name = ?\", (username,))\n    return cursor.fetchall()"
+    }
+  ]
+}

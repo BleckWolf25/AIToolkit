@@ -1,0 +1,8 @@
+diff --git a/ui.js b/ui.js
+index 920fca..a38cf0 100644
+--- a/ui.js
++++ b/ui.js
+@@ -5,3 +5,4 @@ function showModal() {
++    console.log("opening modal");
+     modal.style.display = "block";
+ }

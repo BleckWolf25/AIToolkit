@@ -1,0 +1,34 @@
+prompt_config: prompts/write-commit-message.config.yaml
+
+cases:
+  - name: feat-add-endpoint
+    variables:
+      CONTEXT: Add user profile endpoint returning nickname and avatar
+      DIFF: |
+        diff --git a/server.js b/server.js
+        index 920fca..a38cf0 100644
+        --- a/server.js
+        +++ b/server.js
+        @@ -20,2 +20,4 @@ app.get("/status", (req, res) => res.json({status: "ok"}));
+        +app.get("/profile", (req, res) => {
+        +  res.json({ nickname: "wolf", avatar: "http://example.com/a.png" });
+        +});
+    assertions:
+      - "contains: feat("
+      - "contains: profile"
+
+  - name: fix-null-pointer
+    variables:
+      CONTEXT: Fix null pointer in billing handler when user object is undefined
+      DIFF: |
+        diff --git a/billing.js b/billing.js
+        index 1234a..5678b 100644
+        --- a/billing.js
+        +++ b/billing.js
+        @@ -5,3 +5,3 @@ function processBilling(user) {
+        -    const id = user.id;
+        +    const id = user ? user.id : null;
+             console.log(id);
+    assertions:
+      - "contains: fix"
+      - "contains: null"

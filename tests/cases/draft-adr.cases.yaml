@@ -1,0 +1,27 @@
+prompt_config: prompts/draft-adr.config.yaml
+
+cases:
+  - name: adr-redis-session-cache
+    variables:
+      TITLE: Use Redis for user session storage
+      STATUS: Accepted
+      CONTEXT: Session lookup in database RDS clusters increases read latency and database connections.
+      DECISION: We will introduce a Redis cluster for caching active user session tokens.
+      CONSEQUENCES: Lowers query latency to sub-millisecond, but requires managing cache invalidation and data replication.
+    assertions:
+      - "contains: ## Title"
+      - "contains: accepted"
+      - "contains: session"
+      - "contains: Consequences"
+
+  - name: adr-monolith-to-microservices
+    variables:
+      TITLE: Decouple billing module from monolith
+      STATUS: Proposed
+      CONTEXT: The billing module deployment cycles block simple frontend code changes.
+      DECISION: We will extract the billing core into a separate microservice in Go.
+      CONSEQUENCES: Enables independent deployment cycles and scaling, but adds RPC network latency.
+    assertions:
+      - "contains: ## Status"
+      - "contains: Proposed"
+      - "contains: Consequences"
