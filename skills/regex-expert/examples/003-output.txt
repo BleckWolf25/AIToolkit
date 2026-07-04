@@ -1,0 +1,7 @@
+<regex_pattern>
+/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/
+</regex_pattern>
+<test_cases>
+- Matches: #fff, #AABBCC
+- Fails: #ffff, #g12345
+</test_cases>

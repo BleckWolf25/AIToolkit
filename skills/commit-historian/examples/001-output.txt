@@ -1,0 +1,1 @@
+refactor(auth): secure password storage with bcrypt hashing

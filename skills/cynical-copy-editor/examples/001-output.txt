@@ -1,0 +1,6 @@
+<polished_text>
+We must collaborate to analyze the core issue.
+</polished_text>
+<edit_changelog>
+- Removed clichés: 'at the end of the day', 'leverage synergies', 'dive deep'.
+</edit_changelog>

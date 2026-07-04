@@ -1,0 +1,6 @@
+<assistant_response>
+Structure your essay as follows:
+1. **Introduction:** Hook + Thesis statement.
+2. **Body:** 3 support arguments.
+3. **Conclusion:** Restate thesis + final thought.
+</assistant_response>

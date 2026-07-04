@@ -1,0 +1,1 @@
+Make a prompt to summarize text.

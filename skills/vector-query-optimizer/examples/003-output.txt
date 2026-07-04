@@ -1,0 +1,3 @@
+<optimized_query>
+Docker restart policy daemon configurations container crash --restart=always
+</optimized_query>

@@ -1,0 +1,7 @@
+<regex_pattern>
+/^\d{4}-\d{2}-\d{2}$/
+</regex_pattern>
+<test_cases>
+- Matches: 2026-07-04
+- Fails: 04-07-2026
+</test_cases>

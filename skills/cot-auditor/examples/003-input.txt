@@ -1,0 +1,1 @@
+Trace: Step 1: Need to secure app. Step 2: Install security scanner package. Step 3: App is now fully secure.

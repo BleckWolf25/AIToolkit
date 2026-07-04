@@ -1,0 +1,11 @@
+id: vc-screener
+version: 1.0.0
+target_model: gpt-4o
+fallback_models: [claude-sonnet-5]
+temperature: 0.3
+max_tokens: 2500
+system_prompt: ./SKILL.md
+variables:
+  - INVESTMENT_SECTOR
+examples_dir: ./examples
+last_verified: 2026-07-04

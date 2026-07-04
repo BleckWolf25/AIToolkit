@@ -1,0 +1,15 @@
+id: refactor-logic
+version: 1.2.0
+target_model: gpt-4o
+fallback_models: [claude-sonnet-5]
+temperature: 0.0
+max_tokens: 2000
+system_prompt: ./refactor-logic.md
+variables:
+  - LANGUAGE
+  - FRAMEWORK
+  - GOAL
+  - RAW_CODE
+examples_dir: ../examples/refactor-logic
+eval_cases: ../tests/cases/refactor-logic.cases.yaml
+last_verified: 2026-06-01

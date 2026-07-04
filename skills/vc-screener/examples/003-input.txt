@@ -1,0 +1,1 @@
+Proposal: Custom Git code review scanner. Pricing: $15/seat.

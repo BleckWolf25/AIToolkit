@@ -1,0 +1,6 @@
+<brainstorm_results>
+<concept name="CodeFlow">
+  <hook>We focus on keyboard-only efficiency.</hook>
+  <rational>Appeals directly to command-line power users.</rational>
+</concept>
+</brainstorm_results>

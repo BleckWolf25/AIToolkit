@@ -1,0 +1,5 @@
+<assistant_response>
+- Apple
+- Banana
+- Orange
+</assistant_response>

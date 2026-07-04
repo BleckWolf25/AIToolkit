@@ -1,0 +1,11 @@
+<taxonomy_tree>
+- Level 1: Scripts (Executable)
+  - Level 2: Python
+  - Level 2: Bash
+- Level 1: Web Assets (Static)
+  - Level 2: HTML
+  - Level 2: CSS
+</taxonomy_tree>
+<naming_conventions>
+Use lowercase-dashed naming (e.g. script-type).
+</naming_conventions>

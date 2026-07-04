@@ -1,0 +1,11 @@
+id: jailbreak-redteamer
+version: 1.0.0
+target_model: claude-sonnet-5
+fallback_models: [gpt-4o]
+temperature: 0.7
+max_tokens: 2000
+system_prompt: ./SKILL.md
+variables:
+  - SAFETY_POLICY
+examples_dir: ./examples
+last_verified: 2026-07-04

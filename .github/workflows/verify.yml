@@ -1,0 +1,32 @@
+name: Verify
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint
+          pip install -r requirements.txt
+          
+      - name: Lint with Pylint
+        run: |
+          pylint $(git ls-files '*.py')
+          
+      - name: Run Structural Validation
+        run: |
+          python tests/assertions.py --validate-structure

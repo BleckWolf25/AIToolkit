@@ -1,0 +1,3 @@
+<assistant_response>
+2 + 2 equals 4.
+</assistant_response>

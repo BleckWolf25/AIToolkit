@@ -1,0 +1,1 @@
+Match dates in format YYYY-MM-DD.

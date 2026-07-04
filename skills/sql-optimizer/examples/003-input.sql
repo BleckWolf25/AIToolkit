@@ -1,0 +1,1 @@
+SELECT * FROM products ORDER BY created_at LIMIT 10;

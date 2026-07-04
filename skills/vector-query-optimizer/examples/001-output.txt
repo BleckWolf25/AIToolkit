@@ -1,0 +1,3 @@
+<optimized_query>
+Python list comprehension performance optimization array instantiation time complexity
+</optimized_query>

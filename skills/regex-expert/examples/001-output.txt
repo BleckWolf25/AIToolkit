@@ -1,0 +1,7 @@
+<regex_pattern>
+/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+</regex_pattern>
+<test_cases>
+- Matches: alice@gmail.com
+- Fails: alice@com
+</test_cases>

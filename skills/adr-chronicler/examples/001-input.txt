@@ -1,0 +1,1 @@
+We decided to move to PostgreSQL because MongoDB didn't have transactional support.

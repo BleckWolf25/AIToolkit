@@ -1,0 +1,1 @@
+Goal: Deploy node api and secure database.

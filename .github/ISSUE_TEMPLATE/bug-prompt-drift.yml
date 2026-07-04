@@ -1,0 +1,45 @@
+name: Prompt drift / regression
+description: A prompt stopped behaving correctly, likely after a model update
+title: "[Drift]: "
+labels: ["bug", "prompt-drift"]
+body:
+  - type: input
+    id: prompt
+    attributes:
+      label: Affected prompt or skill
+      placeholder: e.g. prompts/refactor-logic.md
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model / version where it broke
+      placeholder: e.g. gpt-4o-2026-05
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date noticed
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+      description: Paste from examples/ if applicable
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+    validations:
+      required: true
+  - type: checkboxes
+    id: reanchor
+    attributes:
+      label: Have you tried re-anchoring with the golden examples?
+      options:
+        - label: Yes, fed the golden example pairs back in and it still fails
+        - label: No, not yet

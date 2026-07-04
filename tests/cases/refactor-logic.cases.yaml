@@ -1,0 +1,32 @@
+prompt_config: prompts/refactor-logic.config.yaml
+
+cases:
+  - name: python-active-users-filter
+    variables:
+      LANGUAGE: Python
+      FRAMEWORK: none
+      GOAL: execution speed
+      RAW_CODE: |
+        def get_active_users(users):
+            result = []
+            for u in users:
+                if u["active"] == True:
+                    result.append(u)
+            return result
+    assertions:
+      - "contains: ```"
+      - "contains: Trade-offs"
+
+  - name: python-sum-loop
+    variables:
+      LANGUAGE: Python
+      FRAMEWORK: none
+      GOAL: readability
+      RAW_CODE: |
+        def total_price(items):
+            total = 0
+            for item in items:
+                total = total + item["price"] * item["qty"]
+            return total
+    assertions:
+      - "contains: ```"

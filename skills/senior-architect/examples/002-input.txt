@@ -1,0 +1,1 @@
+System: Monolithic service handles billing, auth, and exports. Scale: High CPU spikes.

@@ -1,0 +1,8 @@
+<taxonomy_tree>
+- Level 1: Datastores
+  - Level 2: Relational (MySQL, PostgreSQL)
+  - Level 2: In-Memory (Redis, Memcached)
+</taxonomy_tree>
+<naming_conventions>
+Use uppercase letters for names.
+</naming_conventions>

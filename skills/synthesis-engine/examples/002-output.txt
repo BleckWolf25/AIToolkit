@@ -1,0 +1,7 @@
+<expert_debate>
+<point role="Cyber Security Specialist">Obscurity is not security. UUIDs can be leaked via referer headers.</point>
+<point role="Financial Analyst">S3 storage is cheap, but data breaches carry immense regulatory fines.</point>
+</expert_debate>
+<consensus_synthesis>
+Use private S3 buckets and generate presigned URLs with 15-minute expiration times.
+</consensus_synthesis>

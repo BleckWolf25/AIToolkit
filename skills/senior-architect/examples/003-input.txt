@@ -1,0 +1,1 @@
+System: Frontend polls endpoint every 1 second. Scale: 50k active sockets.

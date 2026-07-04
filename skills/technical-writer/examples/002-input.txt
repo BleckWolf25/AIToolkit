@@ -1,0 +1,1 @@
+App requires env API_KEY, PORT (defaults to 8080). Run with npm start.

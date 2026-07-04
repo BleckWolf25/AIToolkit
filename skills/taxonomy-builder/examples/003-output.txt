@@ -1,0 +1,9 @@
+<taxonomy_tree>
+- Level 1: Dependency Manifests
+  - Level 2: Node.js (package.json)
+  - Level 2: Rust (Cargo.toml)
+  - Level 2: Python (requirements.txt)
+</taxonomy_tree>
+<naming_conventions>
+Use original file naming.
+</naming_conventions>

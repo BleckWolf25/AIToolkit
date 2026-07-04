@@ -1,0 +1,11 @@
+id: taxonomy-builder
+version: 1.0.0
+target_model: gpt-4o
+fallback_models: [claude-sonnet-5]
+temperature: 0.2
+max_tokens: 3000
+system_prompt: ./SKILL.md
+variables:
+  - TAXONOMY_TIERS
+examples_dir: ./examples
+last_verified: 2026-07-04

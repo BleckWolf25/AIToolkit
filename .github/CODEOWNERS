@@ -1,0 +1,7 @@
+# Default owners for everything in the repo
+* @BleckWolf25
+
+# High-stakes deterministic prompts require extra review
+/skills/data-parser/                @BleckWolf25
+/prompts/refactor-logic.md          @BleckWolf25
+/prompts/refactor-logic.config.yaml @BleckWolf25

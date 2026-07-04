@@ -1,0 +1,1 @@
+Proposal: Move all auth logic from Python to a separate Go auth microservice.

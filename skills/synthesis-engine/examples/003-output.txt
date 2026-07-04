@@ -1,0 +1,7 @@
+<expert_debate>
+<point role="Systems Architect">Requires dual-write phase to ensure database replication doesn't lose state.</point>
+<point role="Financial Analyst">Zero downtime prevents loss of conversion, but dual-writing increases server costs temporarily.</point>
+</expert_debate>
+<consensus_synthesis>
+Implement dual-writing for 48 hours, monitor error rates, then switch reads to the new database.
+</consensus_synthesis>

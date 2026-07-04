@@ -1,0 +1,1 @@
+We are locking version versions to 1.0 to prevent dependency breaks.

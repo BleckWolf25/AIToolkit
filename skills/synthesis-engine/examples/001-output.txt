@@ -1,0 +1,7 @@
+<expert_debate>
+<point role="Systems Architect">Go will reduce latency and load on the main service.</point>
+<point role="Cyber Security Specialist">Go's memory safety reduces buffer risks, but introducing network calls for auth increases the attack surface.</point>
+</expert_debate>
+<consensus_synthesis>
+Deploy Go service behind internal private VPC, caching session tokens in Redis to mitigate network latency.
+</consensus_synthesis>

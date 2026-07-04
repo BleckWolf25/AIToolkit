@@ -1,0 +1,6 @@
+<brainstorm_results>
+<concept name="IronMind">
+  <hook>Focuses on cognitive habit training combined with workouts.</hook>
+  <rational>Links mental endurance with physical fitness.</rational>
+</concept>
+</brainstorm_results>

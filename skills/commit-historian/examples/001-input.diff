@@ -1,0 +1,4 @@
+--- a/auth.js
++++ b/auth.js
+-const pwd = req.body.pwd;
++const pwd = bcrypt.hash(req.body.pwd);

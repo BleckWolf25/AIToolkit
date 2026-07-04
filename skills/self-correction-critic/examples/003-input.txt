@@ -1,0 +1,1 @@
+Expected variables capitalized. Output: let user_id = 1

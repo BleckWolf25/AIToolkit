@@ -1,0 +1,7 @@
+{
+  "source": "server-01",
+  "metric": "CPU temperature",
+  "value": 85,
+  "unit": "C",
+  "timestamp": "12:00 UTC"
+}

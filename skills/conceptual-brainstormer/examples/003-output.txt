@@ -1,0 +1,6 @@
+<brainstorm_results>
+<concept name="LocalLens">
+  <hook>Camera-guided history walkthroughs using AR.</hook>
+  <rational>Engages visual learners without heavy text blocks.</rational>
+</concept>
+</brainstorm_results>

@@ -1,0 +1,1 @@
+Final response: {'user': 'Alice', 'role': 'Admin', 'session_active': true}

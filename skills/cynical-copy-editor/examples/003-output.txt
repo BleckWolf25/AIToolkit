@@ -1,0 +1,7 @@
+<polished_text>
+Our team designed the system to scale.
+</polished_text>
+<edit_changelog>
+- Converted passive voice to active.
+- Removed fluff: 'robust'.
+</edit_changelog>

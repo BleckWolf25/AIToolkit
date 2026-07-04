@@ -1,0 +1,1 @@
+Current: State B. Input: transition to State C.

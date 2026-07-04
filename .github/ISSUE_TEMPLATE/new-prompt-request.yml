@@ -1,0 +1,37 @@
+name: New prompt/skill request
+description: Propose a new prompt or skill for the toolkit
+title: "[New Prompt]: "
+labels: ["new-prompt"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Proposed name
+      placeholder: e.g. sql-query-optimizer
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What should it do?
+      description: Describe the task and desired output format.
+    validations:
+      required: true
+  - type: dropdown
+    id: determinism
+    attributes:
+      label: Determinism level
+      options:
+        - Deterministic (temperature 0.0, e.g. code/data parsing)
+        - Creative (temperature 0.7+, e.g. brainstorming/writing)
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Target model
+      placeholder: e.g. gpt-4o, claude-sonnet-5, gemini-1.5-pro
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example input/output (if you have one)

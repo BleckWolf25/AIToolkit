@@ -1,0 +1,1 @@
+System: Node app queries DB directly on every HTTP request. Scale: 10k rps.

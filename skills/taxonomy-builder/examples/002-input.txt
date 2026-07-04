@@ -1,0 +1,1 @@
+Items: MySQL DB, PostgreSQL DB, Redis cache, Memcached cache

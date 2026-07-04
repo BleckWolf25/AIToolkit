@@ -1,0 +1,6 @@
+<polished_text>
+Users expect fast performance.
+</polished_text>
+<edit_changelog>
+- Removed transition filler: 'moreover', 'in today's digital landscape'.
+</edit_changelog>

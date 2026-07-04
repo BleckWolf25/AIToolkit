@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "prompts/**"
+      - "skills/**"
+      - "CHANGELOG.md"
+
+jobs:
+  tag-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create tag from date
+        run: |
+          TAG="toolkit-$(date +'%Y.%m.%d')-${GITHUB_RUN_NUMBER}"
+          git tag "$TAG"
+          git push origin "$TAG"

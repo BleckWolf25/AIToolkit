@@ -1,0 +1,1 @@
+Agreed to use Tailwind instead of Material UI. Alice will update the style config.

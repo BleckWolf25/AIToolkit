@@ -1,0 +1,5 @@
+{
+  "current_state": "State C",
+  "next_state": "State A",
+  "valid": false
+}

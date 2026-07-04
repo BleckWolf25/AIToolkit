@@ -1,0 +1,1 @@
+System logs: Saving user passwords and IP addresses in plaintext logs.
