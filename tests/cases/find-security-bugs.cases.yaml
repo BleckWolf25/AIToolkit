@@ -1,0 +1,34 @@
+prompt_config: prompts/find-security-bugs.config.yaml
+
+cases:
+  - name: flask-injection
+    variables:
+      CONTEXT: Simple Flask web application route processing user feedback forms
+      LANGUAGE: Python
+      RAW_CODE: |
+        from flask import request
+        import sqlite3
+
+        @app.route("/search")
+        def search():
+            query = request.args.get("q")
+            conn = sqlite3.connect("data.db")
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM entries WHERE value = '" + query + "'")
+            return str(cursor.fetchall())
+    assertions:
+      - "contains: SQL Injection"
+      - "contains: SEC-"
+      - "contains: Remediation"
+
+  - name: js-eval
+    variables:
+      CONTEXT: Frontend utility module for parsing math expressions in sandbox
+      LANGUAGE: JavaScript
+      RAW_CODE: |
+        function evaluateFormula(inputStr) {
+            return eval(inputStr); 
+        }
+    assertions:
+      - "contains: eval"
+      - "contains: Severity"

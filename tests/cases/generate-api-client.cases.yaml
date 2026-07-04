@@ -1,0 +1,39 @@
+prompt_config: prompts/generate-api-client.config.yaml
+
+cases:
+  - name: store-items-api
+    variables:
+      LANGUAGE: TypeScript
+      LIBRARY: fetch
+      OPENAPI_SPEC: |
+        {
+          "paths": {
+            "/items": {
+              "get": {
+                "summary": "List all store items"
+              }
+            }
+          }
+        }
+    assertions:
+      - "contains: class"
+      - "contains: items"
+      - "contains: fetch"
+
+  - name: weather-client-requests
+    variables:
+      LANGUAGE: Python
+      LIBRARY: requests
+      OPENAPI_SPEC: |
+        {
+          "paths": {
+            "/weather/today": {
+              "get": {
+                "summary": "Get today weather forecast"
+              }
+            }
+          }
+        }
+    assertions:
+      - "contains: import requests"
+      - "contains: weather"

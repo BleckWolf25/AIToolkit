@@ -1,0 +1,8 @@
+diff --git a/auth.py b/auth.py
+index b288f31..00ff73a 100644
+--- a/auth.py
++++ b/auth.py
+@@ -10,3 +10,3 @@ def verify_token(token):
+-    if token == "admin":
++    if token == "super-secret-admin-token":
+         return True

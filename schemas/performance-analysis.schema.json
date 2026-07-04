@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PerformanceAnalysis",
+  "type": "object",
+  "properties": {
+    "bottlenecks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "impact": {
+            "type": "string",
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "remediation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "impact",
+          "description",
+          "remediation"
+        ]
+      }
+    },
+    "optimized_code": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "bottlenecks",
+    "optimized_code"
+  ]
+}

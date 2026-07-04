@@ -13,10 +13,12 @@ This toolkit provides a systematic way to develop, version, and evaluate LLM pro
 skills/     Persona-level system instructions (long-lived identities)
 prompts/    Task-level, reusable templates with {{VARIABLES}}
 examples/   Golden input/output pairs used for few-shot anchoring and eval
+schemas/    Standard JSON schemas for validating structured output generation
 context/    Reference schemas/docs ("Context Kitchen") kept out of prompts
 tests/      Runner + assertions that validate prompt output programmatically
 scripts/    CLI helpers (template rendering, scaffolding new prompts)
 docs/       Conventions and model-compatibility notes
+
 ```
 
 ## Features & Components
@@ -37,11 +39,12 @@ Here is a breakdown of the core features, what they require, where to find them,
 - **Requirements:** None (pure text), though the `scripts/render_template.py` helper is useful for dynamically injecting variables.
 - **Compatibility:** Works seamlessly with the Personas above. You typically use a Skill as the "System Prompt" and a Task Prompt as the "User Prompt".
 
-### 3. Examples & Context (Standalone)
-- **Where:** `examples/` and `context/` directories.
-- **What it is:** `examples/` contains "golden" input/output pairs for few-shot prompting. `context/` contains reference material (JSON schemas, API docs) to keep prompts clean and legible.
+### 3. Examples, Context, & Schemas (Standalone)
+- **Where:** `examples/`, `context/`, and `schemas/` directories.
+- **What it is:** `examples/` contains "golden" input/output pairs for few-shot prompting. `context/` contains general reference materials (API docs, glossaries). `schemas/` houses standard JSON schemas for validating structured model outputs.
 - **Requirements:** None.
-- **Compatibility:** Used to supplement Prompts and Skills to massively improve model reliability.
+- **Compatibility:** Supplement prompts and skills to secure structured output formats and enable programmatically validated check assertions.
+
 
 ### 4. Automated Evaluation Suite (Tooling)
 - **Where:** `tests/` and `scripts/` directories.

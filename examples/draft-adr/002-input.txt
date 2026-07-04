@@ -1,0 +1,5 @@
+Title: Adopt Tailwind CSS
+Status: Proposed
+Context: Developing custom layouts with custom CSS stylesheets takes a lot of time.
+Decision: We will adopt Tailwind CSS for utility-first styling across all new pages.
+Consequences: Speeds up UI layout assembly, but requires a build process with tailwind compile step.

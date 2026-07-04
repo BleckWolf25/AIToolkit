@@ -1,0 +1,11 @@
+{
+  "findings": [
+    {
+      "id": "SEC-01",
+      "severity": "HIGH",
+      "vulnerability_type": "Path Traversal",
+      "description": "Joining user input path directly allows reading sensitive system files outside upload folder.",
+      "remediation_code": "def load_file(user_path):\n    base_dir = os.path.abspath(\"/var/www/uploads\")\n    full_path = os.path.abspath(os.path.join(base_dir, user_path))\n    if not full_path.startswith(base_dir):\n        raise ValueError(\"Access Denied\")\n    with open(full_path, \"r\") as f:\n        return f.read()"
+    }
+  ]
+}
