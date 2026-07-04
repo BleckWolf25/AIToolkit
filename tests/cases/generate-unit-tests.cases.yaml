@@ -1,0 +1,34 @@
+prompt_config: prompts/generate-unit-tests.config.yaml
+
+cases:
+  - name: python-math-power-tests
+    variables:
+      LANGUAGE: Python
+      TEST_FRAMEWORK: pytest
+      GOAL: boundary values and negative inputs
+      RAW_CODE: |
+        def power(base, exp):
+            if exp < 0:
+                raise NotImplementedError("Negative exponents not supported")
+            if exp == 0:
+                return 1
+            return base * power(base, exp - 1)
+    assertions:
+      - "contains: pytest"
+      - "contains: def test_"
+      - "contains: Raises"
+
+  - name: js-greet-tests
+    variables:
+      LANGUAGE: JavaScript
+      TEST_FRAMEWORK: Jest
+      GOAL: null inputs and edge cases
+      RAW_CODE: |
+        function greet(name) {
+          if (!name) return "Hello, Stranger!";
+          return `Hello, ${name}!`;
+        }
+    assertions:
+      - "contains: describe"
+      - "contains: test"
+      - "contains: expect"

@@ -1,0 +1,45 @@
+prompt_config: prompts/optimize-sql-query.config.yaml
+
+cases:
+  - name: postgresql-select-filtering
+    variables:
+      DIALECT: PostgreSQL
+      SCHEMA: |
+        CREATE TABLE transactions (
+            tx_id SERIAL PRIMARY KEY,
+            account_id INT NOT NULL,
+            tx_date TIMESTAMP,
+            amount DECIMAL(12,2)
+        );
+      QUERY: |
+        SELECT * FROM transactions 
+        WHERE account_id = 12345 
+          AND tx_date >= '2026-01-01 00:00:00';
+      GOAL: eliminate full table scans
+    assertions:
+      - "contains: CREATE INDEX"
+      - "contains: account_id"
+      - "contains: tx_date"
+
+  - name: mysql-join-optimization
+    variables:
+      DIALECT: MySQL
+      SCHEMA: |
+        CREATE TABLE users (
+            user_id INT PRIMARY KEY,
+            username VARCHAR(50)
+        );
+        CREATE TABLE user_logs (
+            log_id INT PRIMARY KEY,
+            user_id INT,
+            login_time DATETIME
+        );
+      QUERY: |
+        SELECT u.username, l.login_time 
+        FROM users u 
+        LEFT JOIN user_logs l ON u.user_id = l.user_id 
+        WHERE u.username LIKE 'admin%';
+      GOAL: optimize joining and filtering indexes
+    assertions:
+      - "contains: INDEX"
+      - "contains: JOIN"
