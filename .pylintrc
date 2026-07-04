@@ -1,0 +1,9 @@
+[MASTER]
+ignore-paths=^examples/.*$,^skills/.*/examples/.*$
+
+[MESSAGES CONTROL]
+disable=too-many-locals,
+        too-many-branches,
+        too-many-statements,
+        too-many-nested-blocks,
+        duplicate-code
